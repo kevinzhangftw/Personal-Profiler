@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Post } from '../../components';
+// material ui themes
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-
-import {Card, CardMedia, CardTitle} from 'material-ui/Card';
-// import static images from the image folder
-import img1 from '../../images/winningTeam.jpg'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+//compoents
+import { Post } from '../../components';
 
 export class Home extends Component {
   static propTypes = {
@@ -17,14 +16,9 @@ export class Home extends Component {
 
   render() {
     return (
-      <MuiThemeProvider> 
-       <Card>
-        <CardMedia>
-          <img src={img1} alt="" />
-        </CardMedia>
-      </Card> 
-      </MuiThemeProvider>
-      
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}> 
+       <Post/>
+      </MuiThemeProvider>      
     );
   }
 }
