@@ -4,11 +4,11 @@ import FlatButton from 'material-ui/FlatButton'
 
 const Post = (props) => 
     <Card>
-        <CardHeader
+        {/* <CardHeader
       title="URL Avatar"
       subtitle="Subtitle"
       showExpandableButton={true}
-        />
+        /> */}
         <CardMedia>
             <img src={props.media} alt="" />
         </CardMedia>
@@ -16,9 +16,9 @@ const Post = (props) =>
         <CardText expandable={true}>
             Yo here is some text 
         </CardText>
-        <CardActions>
+        {/* <CardActions>
             <FlatButton label="Give" />
-        </CardActions>
+        </CardActions> */}
     </Card>     
 
 
