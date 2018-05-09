@@ -10,6 +10,7 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { Post } from '../../components';
 // import static images from the image folder
 import img1 from '../../images/winningTeam.jpg';
+import img2 from '../../images/kaiTimmies.jpg';
 
 export class Home extends Component {
   static propTypes = {
@@ -18,8 +19,11 @@ export class Home extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}> 
-       <Post media={img1} />
+      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+        <ul>
+          <li><Post media={img1}/></li>
+          <li><Post media={img2}/></li>
+        </ul> 
       </MuiThemeProvider>      
     );
   }
