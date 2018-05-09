@@ -1,6 +1,6 @@
 const initialState = {
-  name: 'ALI',
-  lastName: 'ALIZADA',
+  name: 'KAI',
+  lastName: 'Z',
 };
 
 const reducerA = (state = initialState) => {

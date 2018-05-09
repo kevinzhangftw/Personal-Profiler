@@ -8,7 +8,7 @@ export class About extends Component {
   };
 
   render() {
-    return <div>ABOUT!!!!!!!!!!!</div>;
+    return <div>Moriturus te saluto, but of course, I will never die -kai</div>;
   }
 }
 
