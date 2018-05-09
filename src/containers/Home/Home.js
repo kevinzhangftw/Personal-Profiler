@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Post } from '../../components';
-import {Card, CardMedia, CardTitle} from 'material-ui/Card';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 // import static images from the image folder
 import img1 from '../../images/winningTeam.jpg'
 
@@ -15,13 +17,14 @@ export class Home extends Component {
 
   render() {
     return (
-      <Card>
-        <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}>
-        >
+      <MuiThemeProvider> 
+       <Card>
+        <CardMedia>
           <img src={img1} alt="" />
         </CardMedia>
-        <CardTitle title="Card title" subtitle="Card subtitle" />
-      </Card>
+      </Card> 
+      </MuiThemeProvider>
+      
     );
   }
 }
