@@ -1,14 +1,12 @@
-import React from 'react';
-import {Card, CardMedia, CardTitle} from 'material-ui/Card';
-// import static images from the image folder
-import img1 from '../../images/winningTeam.jpg'
+import React from 'react'
+import {Card, CardMedia, CardTitle} from 'material-ui/Card'
 
-const Post = () => (
+const Post = (props) => (
     <Card>
         <CardMedia>
-            <img src={img1} alt="" />
+            <img src={props.media} alt="" />
         </CardMedia>
-    </Card> 
-);
+    </Card>     
+)
 
-export default Post;
+export default Post

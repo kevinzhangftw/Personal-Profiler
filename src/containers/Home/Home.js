@@ -8,6 +8,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 //compoents
 import { Post } from '../../components';
+// import static images from the image folder
+import img1 from '../../images/winningTeam.jpg';
 
 export class Home extends Component {
   static propTypes = {
@@ -17,14 +19,15 @@ export class Home extends Component {
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}> 
-       <Post/>
+       <Post media={img1} />
       </MuiThemeProvider>      
     );
   }
 }
 
 // connect to store
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+});
 
 // Acces to dispatch to run
 const mapDispatchToProps = dispatch => ({});
