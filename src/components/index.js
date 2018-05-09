@@ -1,3 +1,3 @@
-import Button from './Button/Button.js';
+import Post from './Post/Post.js';
 
-export { Button };
+export { Post };
