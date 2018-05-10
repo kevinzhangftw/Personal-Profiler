@@ -2,7 +2,7 @@ import React from 'react'
 import {Card, CardMedia, CardTitle, CardText, CardHeader, CardActions} from 'material-ui/Card'
 import FlatButton from 'material-ui/FlatButton'
 
-const Post = (props) => 
+const Post = ({media, cardTitle, cardText}) => 
     <Card>
         {/* <CardHeader
       title="URL Avatar"
@@ -10,11 +10,11 @@ const Post = (props) =>
       showExpandableButton={true}
         /> */}
         <CardMedia>
-            <img src={props.media} alt="" />
+            <img src={media} alt="" />
         </CardMedia>
-        <CardTitle title="Card title" showExpandableButton={true}/>
+        <CardTitle title={cardTitle} showExpandableButton={true}/>
         <CardText expandable={true}>
-            Yo here is some text 
+            {cardText} 
         </CardText>
         {/* <CardActions>
             <FlatButton label="Give" />
