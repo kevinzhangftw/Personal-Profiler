@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+//lazyload compoents
+import LazyLoad from 'react-lazyload';
 // material ui themes
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -13,17 +15,15 @@ import img1 from '../../images/winningTeam.jpg';
 import img2 from '../../images/kaiTimmies.jpg';
 
 export class Home extends Component {
-  static propTypes = {
-    prop: PropTypes,
-  };
-
   render() {
     return (
       <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
-        <ul>
-          <li><Post media={img1}/></li>
-          <li><Post media={img2}/></li>
-        </ul> 
+        <LazyLoad height={200} offset={100}>
+          <Post media={img1}/>
+        </LazyLoad>
+        <LazyLoad height={200} offset={100}>
+          <Post media={img2}/>
+        </LazyLoad>
       </MuiThemeProvider>      
     );
   }
